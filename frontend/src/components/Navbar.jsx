@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { assets } from '../assets/assets_frontend/assets';
+import { assets } from '../assets/assets';
 import { navbar, profileDropdown } from '../../data';
 import { NavLink, useNavigate } from 'react-router-dom';
 

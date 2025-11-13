@@ -1,5 +1,5 @@
 import React from 'react';
-import { assets } from '../assets/assets_frontend/assets';
+import { assets } from '../assets/assets';
 import { aboutUsData, whyChooseUs } from '../../data';
 
 const About = () => {
