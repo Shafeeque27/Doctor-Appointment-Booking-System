@@ -136,12 +136,12 @@ const MyAppointments = () => {
                         </div>
                         <div></div>
                         <div className="flex flex-col gap-2 justify-end">
-                            {!doc.cancelled && doc.payment && (
+                            {!doc.cancelled && doc.payment && !doc.isComplete && (
                                 <button className="sm:min-w-48 py-2 border rounded text-stone-500 bg-indigo-50">
                                     Paid
                                 </button>
                             )}
-                            {!doc.cancelled && !doc.payment && (
+                            {!doc.cancelled && !doc.payment && !doc.isComplete && (
                                 <button
                                     onClick={() => appointmentRazorpay(doc._id)}
                                     className="text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-primary hover:text-white transition-all duration-300 active:scale-95 cursor-pointer">
@@ -149,16 +149,21 @@ const MyAppointments = () => {
                                 </button>
                             )}
 
-                            {!doc.cancelled && (
+                            {!doc.cancelled && !doc.isComplete && (
                                 <button
                                     onClick={() => cancelAppointment(doc._id)}
                                     className="text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-red-600 hover:text-white transition-all  duration-300 active:scale-95 cursor-pointer">
                                     Cancel appointment
                                 </button>
                             )}
-                            {doc.cancelled && (
+                            {doc.cancelled && !doc.isComplete && (
                                 <button className="sm:min-w-48 py-2 border border-red-600 rounded text-red-600">
                                     Appointment cancelled
+                                </button>
+                            )}
+                            {doc.isComplete && (
+                                <button className="sm:min-w-48 py-2 border border-green-500 rounded text-green-500">
+                                    Completed
                                 </button>
                             )}
                         </div>
