@@ -3,61 +3,43 @@
 A full-stack MERN application that allows patients to book appointments with doctors, manage profiles, make online payments, and more.
 
 🚀 Features
+
 👩‍⚕️ Patient Features
 
 Browse doctors by speciality
-
 View doctor details, available slots, and ratings
-
 Book appointments
-
 Online payment integration (Razorpay)
-
 Manage user profile
-
 View appointment history
 
 🩺 Doctor Features
 
 Manage availability slots
-
 View booked appointments
-
 Update profile details
-
 Approve / Cancel appointments
 
 🔧 Admin Features
 
 Manage doctors
-
 Approve doctor registrations
-
 See overall appointments and platform stats
 
 🛠️ Tech Stack
-Frontend
 
+Frontend:-
 React.js
-
 Context API for state management
-
 React Router
-
 Tailwind CSS
 
-Backend
-
+Backend:-
 Node.js
-
 Express.js
-
 MongoDB (Mongoose ORM)
-
 JWT Authentication
-
 Razorpay Payment Gateway
-
 
 
 Create a .env file:
@@ -70,23 +52,16 @@ RAZORPAY_KEY_SECRET=your_secret
 🔐 Authentication Flow (JWT)
 
 Login/Register returns a JWT token
-
 Token stored in frontend (localStorage)
-
 Protected API routes validated using middleware:
 
 💳 Payment Flow (Razorpay)
 
 User clicks on Pay
-
 Frontend requests an order from backend
-
 Backend creates Razorpay order
-
 Razorpay popup opens
-
 Payment success → Backend verifies signature
-
 Appointment marked as paid
 
 🧑‍💻 Author
