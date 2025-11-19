@@ -28,6 +28,11 @@ const Navbar = () => {
                 ))}
             </ul>
             <div className="flex items-center gap-4">
+                <button
+                    onClick={() => (window.location.href = `${import.meta.env.VITE_ADMIN_URL}/login`)}
+                    className="bg-primary text-white px-4 py-3 rounded-full font-light hidden md:block cursor-pointer">
+                    Admin Panel
+                </button>
                 {token ? (
                     <div className="flex items-center gap-2 cursor-pointer group relative">
                         <img className="w-8 rounded-full" src={userData.image} alt="profile picture" />
@@ -57,7 +62,7 @@ const Navbar = () => {
                 ) : (
                     <button
                         onClick={() => navigate('/login')}
-                        className="bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block">
+                        className="bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block cursor-pointer">
                         Create account
                     </button>
                 )}
