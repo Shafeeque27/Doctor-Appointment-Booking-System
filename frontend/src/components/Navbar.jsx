@@ -28,12 +28,7 @@ const Navbar = () => {
                 ))}
             </ul>
             <div className="flex items-center gap-4">
-                <button
-                    onClick={() =>
-                        (window.location.href =
-                            'https://doctor-appointment-booking-system-kappa-lemon.vercel.app/login')
-                    }
-                    className="bg-primary text-white px-4 py-3 rounded-full font-light hidden md:block cursor-pointer">
+                <button className="bg-primary text-white px-4 py-3 rounded-full font-light hidden md:block cursor-pointer">
                     Admin Panel
                 </button>
                 {token ? (
